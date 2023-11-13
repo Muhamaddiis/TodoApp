@@ -28,13 +28,13 @@ form {
 input {
     color: #444;
     border: none;
-    padding: 1rem 2rem;
+    padding: 0.5rem 1rem;
     width: 100%;
     display: block;
     font-size: 2rem;
 }
 input::placeholder {
-    color: #b5b5b5;
+    color: #d5d5d5;
 }
 .todos {
     background-color: #ffff;
@@ -43,9 +43,26 @@ input::placeholder {
     list-style-type: none;
 }
 .todos li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     border-top: 1px solid #b5b5b5;
     font-size: 1.5rem;
-    padding: 1rem 2rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+.delete {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.todos li.completed{
+    text-decoration: line-through;
+    color: #b5b5b5;
+}
+small{
+    color: #b5b5b5;
+    align-content: center;
 }
 @keyframes slideTop {
     from {
